@@ -112,7 +112,7 @@ while True:
                     html = req.text
                     soup8 = BeautifulSoup(html, 'html.parser')
                     
-                    for i in range(25):
+                    for i in range(23):
                         # 기숙사 공지 크롤링
                         nums = soup8.select('td._artclTdNum')
                         latest_num10 = nums[i].text.strip()
