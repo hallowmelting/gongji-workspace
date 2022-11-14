@@ -52,10 +52,6 @@ while True:
                     imglink0 = soup5.select('img')[0]['src']
                     imglink1 = soup5.select('img')[1]['src']
                     imglink2 = soup5.select('img')[2]['src']
-                    #print(imglink1)
-                    #print(imglink2)
-
-                    #final_message = "[식단 알림]\n\n" + title_latest + "\n\n" + link_latest + "\n\n" + imglink
 
                     bot_token = "5481129438:AAGlrBFZK_ZDvGGLYBYt3Kg6mPL260K5kFM"
                     bot = telegram.Bot(bot_token)
