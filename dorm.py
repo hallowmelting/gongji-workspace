@@ -49,8 +49,9 @@ while True:
 
                     html = req.text
                     soup5 = BeautifulSoup(html, 'html.parser')
-                    imglink1 = soup5.select('img')[0]['src']
-                    imglink2 = soup5.select('img')[1]['src']
+                    imglink0 = soup5.select('img')[0]['src']
+                    imglink1 = soup5.select('img')[1]['src']
+                    imglink2 = soup5.select('img')[2]['src']
                     #print(imglink1)
                     #print(imglink2)
 
@@ -60,9 +61,18 @@ while True:
                     bot = telegram.Bot(bot_token)
 
                     #bot.sendMessage(chat_id, text=final_message)
+                    bot.sendPhoto(chat_id, photo=imglink0, caption=title_latest)
+                    time.sleep(1)
                     bot.sendPhoto(chat_id, photo=imglink1, caption=title_latest)
                     time.sleep(1)
                     bot.sendPhoto(chat_id, photo=imglink2, caption=title_latest)
+
+
+                    bot.sendPhoto(chat_id_sumin, photo=imglink0, caption=title_latest)
+                    time.sleep(1)
+                    bot.sendPhoto(chat_id_sumin, photo=imglink1, caption=title_latest)
+                    time.sleep(1)
+                    bot.sendPhoto(chat_id_sumin, photo=imglink2, caption=title_latest)
 
                     # bot.sendPhoto(chat_id_sumin, photo=imglink1, caption=title_latest)
                     # time.sleep(1)
